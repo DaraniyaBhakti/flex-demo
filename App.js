@@ -7,7 +7,9 @@ export default function App() {
     <View style={styles.container}>
      
       <Image style={styles.iconMic} source={require('./assets/baseline_mic_off_white_24dp.png')}/>
-      <Image style={styles.iconDp} source={require('./assets/R.jpeg')}/>
+      <View style={styles.viewDp}>
+       <Image style={styles.iconDp} source={require('./assets/R.jpeg')}/>
+      </View>
       <Text style={styles.textYou}>You</Text> 
       <StatusBar style="light" />
     </View>
@@ -21,25 +23,31 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection:'column',
     backgroundColor: '#000',
-    justifyContent:'space-between'
+    // justifyContent:'space-between'
   },
   textYou:{
       color:'white',
       alignSelf:'flex-start',
       fontSize:18,
-     
+      height:'10%'
+  },
+  viewDp:{
+      height:'85%',
+      width:'100%',
+      backgroundColor:'red',
+      justifyContent:'center'
   },
   iconDp:{
     alignSelf:'center',
-    width:150,
-    height:150,
+    height:'30%',
+    width:'50%'
   },
   iconMic:{
     alignSelf:'flex-end',
     marginTop:20,
-    width:30,
-    height:30,
-    
+    height:'5%',
+    margin:5,
+    width:'5%'
   }
 });
 
